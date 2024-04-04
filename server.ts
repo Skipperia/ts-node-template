@@ -1,11 +1,17 @@
-import express from 'express';
-const app = express();
-const port = 3000;
+import express, { Express } from 'express';
+import userRoutes from './app/routes/userRoutes';
+import errorHandler from './app/middlewares/errorHandler';
 
+const app: Express = express();
+const PORT: number = parseInt(process.env.PORT as string, 10) || 3000;
+
+app.use(express.json());
+app.use('/users', userRoutes);
 app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+    throw new Error("dsads");
+})
+app.use(errorHandler);
 
-app.listen(port, () => {
-  return console.log(`Express is listening at http://localhost:${port}`);
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
