@@ -10,3 +10,7 @@ export const createUser = (userData: User): User => {
     // Business logic to create a new user
     return userModel.create(userData);
 };
+
+export const getUserById = (id: number): User => {
+    return userModel.findById(id);
+}

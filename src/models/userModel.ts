@@ -1,10 +1,10 @@
 import { User } from '../interfaces/userInterface';
 
-// Mock database
+
 let users: User[] = [];
 
 export const findAll = (): User[] => {
-    // Returns all users
+
     return users;
 };
 
@@ -34,7 +34,6 @@ export const updateById = (id: number, userData: Partial<User>): User | undefine
 };
 
 export const deleteById = (id: number): boolean => {
-    // Deletes a user by ID
     const userIndex = users.findIndex(user => user.id === id);
 
     if (userIndex === -1) {

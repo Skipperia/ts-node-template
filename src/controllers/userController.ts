@@ -10,3 +10,15 @@ export const createUser = (req: Request, res: Response): void => {
     const newUser = userService.createUser(req.body);
     res.status(201).json(newUser);
 };
+
+
+export const getUserById = (req: Request, res: Response): void => {
+    const userIdInput = req.params.userId;
+    const userId = Number(userIdInput);
+    const user = userService.getUserById(userId);
+    if (!user) {
+        res.status(404).json({ error: 'User not found' });
+    } else {
+        res.json(user);
+    }
+};
