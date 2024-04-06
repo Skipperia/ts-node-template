@@ -15,13 +15,13 @@ const Header: React.FC = () => {
     }
 
     return (<div className='App-header'>
-        <h2 id='site-title' onClick={navigateToHome}>skipper.ws</h2>
-        <div className='right-content'>
+        <div className='left-content'>
+            <h2 id='site-title' onClick={navigateToHome}>skipper.ws</h2>
             <button id='aboutButton' onClick={navigateToAbout}>whoami</button>
-            <div>
-                <p id='dntknow'>don't know css</p>
-                <p id='dntknow'>pls forgive</p>
-            </div>
+        </div>
+        <div className='right-content'>
+            <p id='dntknow'>don't know css</p>
+            <p id='dntknow'>pls forgive</p>
         </div>
     </div>
     );

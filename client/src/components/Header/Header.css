@@ -13,11 +13,10 @@
     font-size: 1.5rem;
 }
 
-.right-content {
+.left-content, .right-content {
     display: flex;
     align-items: center;
-    gap: 10px;
-    /* This adds some space between your button and paragraph */
+    gap: 10px;  
 }
 
 #aboutButton {

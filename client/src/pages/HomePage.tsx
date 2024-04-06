@@ -3,7 +3,7 @@ import PageContent from '../components/PageContent/PageContent';
 
 const HomePage: React.FC = () => {
   return (<div>
-    <PageContent pageTitle={"HomePage"} />
+    <PageContent pageTitle={"HomePage"} pageContent='this is my home ' />
   </div>);
 }
 

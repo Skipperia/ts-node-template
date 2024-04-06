@@ -3,10 +3,11 @@ import CoolPageTitle from "../CoolPageTitle/CoolPageTitle";
 import '../styles/pagecontent.css';
 
 interface PageContentProps {
-    pageTitle: string
+    pageTitle: string,
+    pageContent: string
 }
 const PageContent = (props: PageContentProps) => {
-    const content = "dsadsa";
+    const content = props.pageContent;
 
     return (
         <div>
