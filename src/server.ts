@@ -4,7 +4,7 @@ import errorHandler from './middlewares/errorHandler';
 import path from "path";
 
 const app: Express = express();
-const PORT: number = parseInt(process.env.PORT as string, 10) || 3000;
+const PORT: number = parseInt(process.env.PORT as string, 10) || 5000;
 
 
 app.use(express.json());
