@@ -1,7 +1,10 @@
 import React from 'react';
+import PageContent from '../components/PageContent/PageContent';
 
 const AboutPage: React.FC = () => {
-  return <h2>About Page</h2>;
+  return (<div>
+    <PageContent pageTitle={"about pagerino"} />
+  </div>);
 }
 
 export default AboutPage;

@@ -6,13 +6,16 @@ import './Header.css';
 const Header: React.FC = () => {
     let navigate = useNavigate();
 
-
     const navigateToAbout = () => {
         navigate('/about');
     };
 
+    const navigateToHome = () => {
+        navigate('/');
+    }
+
     return (<div className='App-header'>
-        <h2 id='site-title'>skipper.ws</h2>
+        <h2 id='site-title' onClick={navigateToHome}>skipper.ws</h2>
         <div className='right-content'>
             <button id='aboutButton' onClick={navigateToAbout}>whoami</button>
             <div>

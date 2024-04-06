@@ -36,6 +36,7 @@
 
 #site-title:hover {
     color: grey;
+    cursor: pointer;
 }
 
 #dntknow {
