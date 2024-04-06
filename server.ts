@@ -10,6 +10,10 @@ app.use('/users', userRoutes);
 app.get('/', (req, res) => {
     res.send(":)");
 })
+app.get('/a', (req, res) => {
+    throw new Error("dsadsa");
+})
+
 app.use(errorHandler);
 
 app.listen(PORT, () => {
