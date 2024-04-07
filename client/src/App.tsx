@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { PrimeReactProvider } from 'primereact/api';
-import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate, HashRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, HashRouter } from 'react-router-dom';
 
 import './App.css';
 import Header from './components/Header/Header';
