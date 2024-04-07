@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PageContent from '../components/PageContent/PageContent';
 
 const HomePage: React.FC = () => {
-  const pageContent = "aaa";
+  const pageContent = "testing2";
 
   return (<div>
     <PageContent pageTitle={"HomePage"} pageContent={pageContent} />

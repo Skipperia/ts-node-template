@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { PrimeReactProvider } from 'primereact/api';
-import { Routes, Route, Navigate, HashRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 
 import './App.css';
 import Header from './components/Header/Header';
@@ -12,17 +12,18 @@ const App = () => {
     ripple: true
   };
 
+
   return (
     <div className="App">
       <PrimeReactProvider value={reactConfig}>
-        <HashRouter>
+        <Router>
           <Header />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
-        </HashRouter>
+        </Router>
       </PrimeReactProvider>
     </div>
   );

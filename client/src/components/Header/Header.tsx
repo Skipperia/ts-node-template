@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import './Header.css';
 
 const Header: React.FC = () => {
-    let navigate = useNavigate();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+      const redirectPath = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirectPath) {
+        navigate(redirectPath);
+      }
+    }, [navigate]);
 
     const navigateToAbout = () => {
         navigate('/about');
