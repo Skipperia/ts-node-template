@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CoolPageTitle from "../CoolPageTitle/CoolPageTitle";
 import '../styles/pagecontent.css';
 
